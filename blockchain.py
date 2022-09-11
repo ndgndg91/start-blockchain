@@ -106,6 +106,9 @@ if __name__ == '__main__':
     app = Flask(__name__)
     app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
+    # Creating an address for the node on Port 8080
+    node_address = str(uuid4()).replace('-', '')
+
     # Creating a Blockchain
     blockchain = Blockchain()
 
@@ -116,13 +119,15 @@ if __name__ == '__main__':
         previous_proof = previous_block['proof']
         proof = proof_of_work(previous_proof=previous_proof)
         previous_hash = create_hash(previous_block)
+        blockchain.add_transaction(sender=node_address, receiver='giri', amount=1)
         block = blockchain.create_block(proof, previous_hash)
         response = {
             'message': 'Congratulations, you just mined a block!',
             'index': block['index'],
             'timestamp': block['timestamp'],
             'proof': block['proof'],
-            'previous_hash': block['previous_hash']
+            'previous_hash': block['previous_hash'],
+            'transactions': block['transactions']
         }
         return jsonify(response), 200
 
