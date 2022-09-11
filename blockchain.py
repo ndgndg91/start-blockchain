@@ -149,6 +149,24 @@ if __name__ == '__main__':
         }
         return jsonify(response), 200
 
+    # Adding a new transaction to the Blockchain
+    @app.route('/add_transaction', methods=['POST'])
+    def add_transaction():
+        request_body = request.get_json()
+        transaction_keys = ['sender', 'receiver', 'amount']
+        if not all(key in request_body for key in transaction_keys):
+            return jsonify({
+                'message': 'Some elements of the transaction are missing!'
+            }), 400
+        index = blockchain.add_transaction(
+            request_body['sender'],
+            request_body['receiver'],
+            request_body['amount']
+        )
+        return jsonify({
+            'message': f'This transaction will be added to Block {index}'
+        }), 201
+
 
     # Part 3 - Decentralizing our Blockchain
 
