@@ -55,7 +55,7 @@ class Blockchain:
             'timestamp': str(datetime.datetime.now()),  # 채굴된 시간
             'proof': proof,  # 작업 증명
             'previous_hash': previous_hash,  # 이전 블락 해시
-            'transaction': self.transactions
+            'transactions': self.transactions
         }
         self.transactions = []
         self.chain.append(block)
