@@ -144,10 +144,13 @@ if __name__ == '__main__':
     @app.route('/is_valid', methods=['GET'])
     def is_valid_chain():
         valid = is_chain_valid(blockchain.chain)
-        response = {
-            'valid': valid
-        }
-        return jsonify(response), 200
+        message = 'Houston, we have a problem. The Blockchain is not valid.'
+        if valid:
+            message = 'All good. The Blockchain is valid.'
+        return jsonify({
+            'valid': valid,
+            'message': message
+        }), 200
 
     # Adding a new transaction to the Blockchain
     @app.route('/add_transaction', methods=['POST'])
@@ -184,6 +187,19 @@ if __name__ == '__main__':
             'message': 'All the nodes are now connected. The giricoins the followings nodes:',
             'total_nodes': list(blockchain.nodes)
         }), 201
+
+    # Replacing the chain by the longest chain if needed
+    @app.route('/replace_chain', methods=['GET'])
+    def replace_chain():
+        replaced = blockchain.replace_chain()
+        message = 'The nodes had different chains so the chain was replaced by the longest chains.'
+        if replaced:
+            message = 'All good. Then chain is the longest one.'
+        return jsonify({
+            'replaced': replaced,
+            'message': message,
+            'chain': blockchain.chain
+        }), 200
 
     app.run(
         host='0.0.0.0',
