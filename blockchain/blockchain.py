@@ -200,11 +200,6 @@ class Node:
                 'chain': blockchain.chain
             }), 200
 
-        app.run(
-            host='0.0.0.0',
-            port=port
-        )
-
     def run(self):
         self.app.run(
             host='0.0.0.0',
