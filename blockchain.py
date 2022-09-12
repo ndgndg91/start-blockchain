@@ -167,8 +167,23 @@ if __name__ == '__main__':
             'message': f'This transaction will be added to Block {index}'
         }), 201
 
-
     # Part 3 - Decentralizing our Blockchain
+
+    # Connecting new nodes
+    @app.route('/connect_node', methods=['POST'])
+    def connect_node():
+        request_body = request.get_json()
+        nodes = request_body.get('nodes')
+        if nodes is None:
+            return jsonify({
+                'message': 'No node'
+            }), 400
+        for node in nodes:
+            blockchain.add_node(node)
+        return jsonify({
+            'message': 'All the nodes are now connected. The giricoins the followings nodes:',
+            'total_nodes': list(blockchain.nodes)
+        }), 201
 
     app.run(
         host='0.0.0.0',
