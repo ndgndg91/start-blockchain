@@ -192,9 +192,9 @@ if __name__ == '__main__':
     @app.route('/replace_chain', methods=['GET'])
     def replace_chain():
         replaced = blockchain.replace_chain()
-        message = 'The nodes had different chains so the chain was replaced by the longest chains.'
+        message = 'All good. Then chain is the longest one.'
         if replaced:
-            message = 'All good. Then chain is the longest one.'
+            message = 'The nodes had different chains so the chain was replaced by the longest chains.'
         return jsonify({
             'replaced': replaced,
             'message': message,
