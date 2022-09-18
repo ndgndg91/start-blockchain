@@ -266,3 +266,27 @@
 11. iterate 6 to 10
 
 
+# Smart Contract
+- https://remix-project.org/
+- https://github.com/MyEtherWallet/etherwallet
+- https://trufflesuite.com/ganache/
+
+1. create network giricoin ico in etherwallet
+<img width="1209" alt="스크린샷 2022-09-18 오후 3 49 35" src="https://user-images.githubusercontent.com/19872667/190889653-58b9ffb2-6bd6-4b36-b040-0109238bd851.png">
+<img width="812" alt="스크린샷 2022-09-18 오후 3 49 28" src="https://user-images.githubusercontent.com/19872667/190889666-78ae2a94-1c99-4ddb-a959-1c087ffc315b.png"><br>
+<img width="318" alt="스크린샷 2022-09-18 오후 3 49 46" src="https://user-images.githubusercontent.com/19872667/190889668-2f37086f-b65e-4c2f-914a-b55abf1eae4e.png">
+2. use giricoin_ico bytecode in etherwallet index.html
+<img width="1715" alt="스크린샷 2022-09-18 오후 3 49 50" src="https://user-images.githubusercontent.com/19872667/190889690-3e444281-6b4b-48c6-9b52-acb069fb4b2a.png">
+3. use private key in ganache<br>
+<img width="710" alt="스크린샷 2022-09-18 오후 3 49 39" src="https://user-images.githubusercontent.com/19872667/190889703-2b74140a-0fb5-4774-9f85-73654eb817fd.png">
+<img width="1693" alt="스크린샷 2022-09-18 오후 3 56 41" src="https://user-images.githubusercontent.com/19872667/190889738-336ccb11-4a71-4e89-9c3c-64c3b75b08b1.png">
+4. you can check transaction and block in ganache
+<img width="1207" alt="스크린샷 2022-09-18 오후 3 58 27" src="https://user-images.githubusercontent.com/19872667/190889871-d49b5999-c880-47ce-a6d9-98e4b58286ba.png">
+<img width="1200" alt="스크린샷 2022-09-18 오후 3 58 32" src="https://user-images.githubusercontent.com/19872667/190889875-d2ea2599-753c-41cb-a13e-381e197ee7b0.png">
+<img width="1200" alt="스크린샷 2022-09-18 오후 3 58 37" src="https://user-images.githubusercontent.com/19872667/190889877-052f77ef-3484-4c96-85a0-511f5704f453.png">
+<img width="1203" alt="스크린샷 2022-09-18 오후 3 59 34" src="https://user-images.githubusercontent.com/19872667/190889879-f39fa953-92d2-4af4-9ee9-722b6a482c37.png">
+<img width="1204" alt="스크린샷 2022-09-18 오후 3 59 50" src="https://user-images.githubusercontent.com/19872667/190889880-c61fa70a-9179-4abd-9c7b-8ab468d03dea.png">
+5. interact with contract
+<img width="1705" alt="스크린샷 2022-09-18 오후 4 39 37" src="https://user-images.githubusercontent.com/19872667/190891230-2f2ae4a4-7865-4b7f-94a0-512c2020b4c2.png">
+<img width="1203" alt="스크린샷 2022-09-18 오후 4 40 03" src="https://user-images.githubusercontent.com/19872667/190891232-72b2d755-f761-416d-9e4a-d1f07620f6d2.png">
+<img width="1195" alt="스크린샷 2022-09-18 오후 4 40 09" src="https://user-images.githubusercontent.com/19872667/190891233-95647988-7eec-4ee0-956b-978fb6042d67.png">
